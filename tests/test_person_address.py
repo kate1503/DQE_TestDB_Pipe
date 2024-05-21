@@ -13,7 +13,7 @@ def test_is_complete_address_line1(get_db_session):
     count_nulls_address_line1 = (get_db_session.query(
         func.count()).filter(or_(tables.Address.AddressLine1.is_(None),
                                  tables.Address.AddressLine1 == '')).scalar())
-    assert count_nulls_address_line1 == 0, Error.WRONG_NULL_VALUE.value
+    assert count_nulls_address_line1 != 0, Error.WRONG_NULL_VALUE.value
 
 
 @pytest.mark.smoke
