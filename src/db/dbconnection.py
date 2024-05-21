@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base
 from settings import USERID, PASSWORD, SERVER_PORT
 
 DRIVER_NAME = 'SQL Server'
-SERVER_HOST = 'localhost'
+SERVER_HOST = 'host.docker.internal'
 DATABASE = 'AdventureWorks2012'
 PORT = SERVER_PORT
 USER_ID = USERID
